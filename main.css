@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.calcbox {
+    margin: 0 auto;
+    width: 360px;
+    height: 640px;
+    border-radius: 2px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+}
+
+.screenbox {
+    height: 100px;
+    padding: 10px;
+}
+
+#title {
+    height: 30px;
+    text-align: left;
+    color: darkcyan;
+    font-weight: bold;
+}
+
+#memory {
+    height: 30px;
+    text-align: end;
+}
+
+#screen {
+    height: 60px;
+    font-size: 180%;
+    text-align: right;
+}
+
+.menubox button {
+    width: 64px;
+    height: 40px;
+    background-color: cadetblue;
+    color: black;
+}
+
+.keybox {
+    padding: 10px;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.keybox button {
+    width: 70px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(30, 30, 30);
+    color: whitesmoke;
+}
+
+.keybox .key {
+    width: 70px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(30, 30, 50);
+    color: whitesmoke;
+}

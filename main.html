@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Calculator</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="calcbox">
+        <div class="screenbox">
+            <p id="title">Calculator</p>
+            <p id="memory">0</p>
+            <p id="screen">0</p>
+        </div>
+        <div class="menubox">
+            <button id="menu1">표준</button>
+            <button id="menu2">menu2</button>
+            <button id="menu3">menu3</button>
+            <button id="menu4">menu4</button>
+            <button id="menu5">menu5</button>
+        </div>
+        <div class='keybox'>
+            <span class='row'>
+                <button onclick="Percent()">&percnt;</button>
+                <button onclick="CleanEntry()">CE</button>
+                <button onclick="Clear()">C</button>
+                <button onclick="Del()">Delete</button>
+            </span>
+            <div class='row'>
+                <button onclick="Fraction()">&#8543;&xscr;</button>
+                <button onclick="Square()">&xscr;&sup2;</button>
+                <button onclick="SquareRoot()">&radic;<span style="text-decoration:overline;">&xscr;</span></button>
+                <button onclick="Arithmetic('/')">&divide;</button>
+            </div>
+            <div class='row'>
+                <button onclick="PrintNumber('7')">7</button>
+                <button onclick="PrintNumber('8')">8</button>
+                <button onclick="PrintNumber('9')">9</button>
+                <button onclick="Arithmetic('*')">&times;</button>
+            </div>
+            <div class='row'>
+                <button onclick="PrintNumber('4')">4</button>
+                <button onclick="PrintNumber('5')">5</button>
+                <button onclick="PrintNumber('6')">6</button>
+                <button onclick="Arithmetic('-')">&minus;</button>
+            </div>
+            <div class='row'>
+                <button onclick="PrintNumber('1')">1</button>
+                <button onclick="PrintNumber('2')">2</button>
+                <button onclick="PrintNumber('3')">3</button>
+                <button onclick="Arithmetic('+')">&plus;</button>
+            </div>
+            <div class='row'>
+                <button onclick="plusminus()">&plusmn;</button>
+                <button onclick="PrintNumber('0')">0</button>
+                <button onclick="point()">&period;</button>
+                <button onclick="Equals('=')">&equals;</button>
+            </div>
+        </div>
+    </div>
+    <div class="history">
+        
+    </div>
+</body>
+
+</html>
