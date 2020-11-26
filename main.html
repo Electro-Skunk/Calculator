@@ -12,60 +12,72 @@
 </head>
 
 <body>
-    <div class="calcbox">
-        <div class="screenbox">
+    <div class="wrap">
+        <header>
             <p id="title">Calculator</p>
-            <p id="memory">0</p>
-            <p id="screen">0</p>
-        </div>
+            <p id="formula"></p>
+            <p id="screen"></p>
+        </header>
         <div class="menubox">
-            <button id="menu1">표준</button>
-            <button id="menu2">menu2</button>
-            <button id="menu3">menu3</button>
-            <button id="menu4">menu4</button>
-            <button id="menu5">menu5</button>
+            <button id="menu1">MC</button>
+            <button id="menu2">MR</button>
+            <button id="menu3">M+</button>
+            <button id="menu4">M-</button>
+            <button id="menu5">MS</button>
         </div>
-        <div class='keybox'>
-            <span class='row'>
+        <div class="keybox">
+            <span class="row">
                 <button onclick="Percent()">&percnt;</button>
                 <button onclick="CleanEntry()">CE</button>
                 <button onclick="Clear()">C</button>
                 <button onclick="Del()">Delete</button>
             </span>
-            <div class='row'>
+            <div class="row">
                 <button onclick="Fraction()">&#8543;&xscr;</button>
                 <button onclick="Square()">&xscr;&sup2;</button>
                 <button onclick="SquareRoot()">&radic;<span style="text-decoration:overline;">&xscr;</span></button>
                 <button onclick="Arithmetic('/')">&divide;</button>
             </div>
-            <div class='row'>
+            <div class="row">
                 <button onclick="PrintNumber('7')">7</button>
                 <button onclick="PrintNumber('8')">8</button>
                 <button onclick="PrintNumber('9')">9</button>
                 <button onclick="Arithmetic('*')">&times;</button>
             </div>
-            <div class='row'>
+            <div class="row">
                 <button onclick="PrintNumber('4')">4</button>
                 <button onclick="PrintNumber('5')">5</button>
                 <button onclick="PrintNumber('6')">6</button>
                 <button onclick="Arithmetic('-')">&minus;</button>
             </div>
-            <div class='row'>
+            <div class="row">
                 <button onclick="PrintNumber('1')">1</button>
                 <button onclick="PrintNumber('2')">2</button>
                 <button onclick="PrintNumber('3')">3</button>
                 <button onclick="Arithmetic('+')">&plus;</button>
             </div>
-            <div class='row'>
-                <button onclick="plusminus()">&plusmn;</button>
+            <div class="row">
+                <button onclick="Plusminus()">&plusmn;</button>
                 <button onclick="PrintNumber('0')">0</button>
-                <button onclick="point()">&period;</button>
+                <button onclick="Point()">&period;</button>
                 <button onclick="Equals('=')">&equals;</button>
             </div>
         </div>
+        <footer>
+            <a href="https://electroskunk.tistory.com/">Electro Skunk</a>
+        </footer>
     </div>
-    <div class="history">
-        
+
+    <div class="wrap">
+        <div class="tap">
+            <button id="history" autofocus="autofocus">History</button>
+            <button id="memory">Memory</button>
+        </div>
+        <div class="memorybox">
+        </div>
+        <div class="bottom">
+            <button id="remove"onclick="Remove()">remove all</button>
+        </div>
     </div>
 </body>
 

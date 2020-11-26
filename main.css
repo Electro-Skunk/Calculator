@@ -5,17 +5,21 @@
     color: white;
 }
 
-.calcbox {
-    margin: 0 auto;
-    width: 360px;
-    height: 640px;
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap {
+    width: 356px;
+    height: 636px;
     border-radius: 2px;
     border: 2px solid whitesmoke;
     text-align: center;
+    overflow: hidden;
 }
 
-.screenbox {
-    height: 100px;
+header {
     padding: 10px;
 }
 
@@ -26,26 +30,46 @@
     font-weight: bold;
 }
 
-#memory {
-    height: 30px;
+#formula {
+    height: 50px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
     text-align: end;
+    overflow: auto;
 }
 
 #screen {
-    height: 60px;
-    font-size: 180%;
+    height: 40px;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 10px;
+    padding-top: 0;
+    background-color: rgb(30, 30, 30);
+    font-size: 32px;
     text-align: right;
 }
 
+.menubox {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .menubox button {
-    width: 64px;
+    width: 60px;
     height: 40px;
     background-color: cadetblue;
     color: black;
 }
 
+.menubox button:hover {
+    background-color: rgb(115, 178, 180);
+}
+
 .keybox {
-    padding: 10px;
+    padding: 20px;
+    padding-top: 10px;
     border-bottom: 2px solid whitesmoke;
 }
 
@@ -58,11 +82,76 @@
     color: whitesmoke;
 }
 
-.keybox .key {
-    width: 70px;
-    height: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: rgb(30, 30, 50);
-    color: whitesmoke;
+.keybox button:hover {
+    background-color: rgb(50, 50, 50);
+}
+
+footer a {
+    text-decoration: none;
+    line-height: 32px;
+    font-style: italic;
+}
+
+footer a:hover {
+    color: #fddb3a;
+}
+
+.tap {
+    height: 30px;
+    padding: 10px;
+    text-align: left;
+}
+
+.tap button {
+    border: none;
+    width: 60px;
+    height: 30px;
+}
+
+.tap button:hover {
+    color: cadetblue;
+}
+
+.tap button:focus {
+    border-bottom: 2px solid cadetblue;
+}
+
+.memorybox {
+    overflow: auto;
+    height: 500px;
+    margin: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 10px;
+    text-align: right;
+    background-color: rgb(30, 30, 30);
+}
+
+.memorybox button {
+    width: 296px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    text-align: right;
+    background-color: rgb(30, 30, 30);
+    border: none;
+}
+
+.memorybox button:hover {
+    background-color: rgb(50, 50, 50);
+    color: cadetblue;
+}
+
+.bottom {
+    height: 32px;
+}
+
+.bottom button {
+    border: none;
+    width: 356px;
+    height: 32px;
+}
+
+.bottom button:hover {
+    color: cadetblue;
 }

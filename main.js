@@ -17,7 +17,7 @@ let again = false;
 
 // 수식 작성(memory 화면 값)
 function GetFormula() {
-    let memory = [];
+    let formula = [];
     const dict = {
         '+': '+',
         '-': '-',
@@ -26,10 +26,10 @@ function GetFormula() {
         '=': '='
     }
     for (let i = 0; i < numbers.length; i++) {
-        memory.push(numbers[i]);
-        memory.push(dict[signs[i]]);
+        formula.push(numbers[i]);
+        formula.push(dict[signs[i]]);
     }
-    str = memory.join(' ');
+    str = formula.join(' ');
     return $('<textarea />').html(str).text();
 }
 
@@ -37,10 +37,10 @@ function GetFormula() {
 function PrintOut(screen_is_result = true) {
     if (screen_is_result == false) {
         document.getElementById('screen').innerHTML = screen;
-        document.getElementById('memory').innerHTML = GetFormula();
+        document.getElementById('formula').innerHTML = GetFormula();
     } else {
         document.getElementById('screen').innerHTML = result;
-        document.getElementById('memory').innerHTML = GetFormula();
+        document.getElementById('formula').innerHTML = GetFormula();
     }
 }
 
@@ -62,7 +62,7 @@ function PrintNumber(value) {
 }
 
 // 숫자 부호 바꾸기(+/-)
-function plusminus() {
+function Plusminus() {
     screen = document.getElementById('screen').innerHTML;
     if (screen == '0') {
         screen = '0';
@@ -75,7 +75,7 @@ function plusminus() {
 }
 
 // 소수점 입력(.)
-function point() {
+function Point() {
     screen = document.getElementById('screen').innerHTML;
     if (screen == '0') {
         screen = '0.';
@@ -245,8 +245,26 @@ function Equals(sign) {
     }
     PrintOut(false);
     AgainOrNot(false);
+    CreateHistory();
 
     result = 0;
     numbers = [];
     signs = [];
+}
+
+
+/*              history, memory 화면             */
+function CreateHistory() {
+    let mbox = document.getElementsByClassName("memorybox")
+    let button = document.createElement("button");
+    button.innerHTML = GetFormula() + " " + result;
+    mbox[0].appendChild(button);
+}
+
+function Remove() {
+    let mbox = document.getElementsByClassName("memorybox");
+    let l = mbox[0].children.length;
+    for (i=0; i<=l; i++) {
+        mbox[0].removeChild(mbox[0].firstChild);
+    }
 }
